@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Checking files..."
+      - test -f index.html && echo "index.html found"
+      - grep -q "Hello" index.html && echo "Test passed"
+
+artifacts:
+  files:
+    - index.html
